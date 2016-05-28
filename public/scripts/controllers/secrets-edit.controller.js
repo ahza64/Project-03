@@ -51,5 +51,5 @@ function SecretsEditController ($location, $http, $routeParams) {
       console.error("Failed to get secret", response);
       $location.path("/");
     }
-  };
+  }
 }

@@ -8,16 +8,16 @@ var user_a = {
 
 var secrets = [
   {
-    title: "30 Seward St, San Francisco",
-    content: "A tiny secluded park with huge dual slides, for fun and racing. Besure to bring a piece of cardboard"
+    location: "30 Seward St, San Francisco",
+    secret: "A tiny secluded park with huge dual slides, for fun and racing. Besure to bring a piece of cardboard"
   },
   {
-    title: "902 Point Lobos Ave, San Francisco",
-    content: "Hike down the trail, below the cliff house to find the ruins of the old Japanese Sutro Bath house. During the night, it's quite a sight as the reflection of the cliff house lights reflect off the water. If you're lucky enough, you'll catch an underground rock show in the tunnel"
+    location: "902 Point Lobos Ave, San Francisco",
+    secret: "Hike down the trail, below the cliff house to find the ruins of the old Japanese Sutro Bath house. During the night, it's quite a sight as the reflection of the cliff house lights reflect off the water. If you're lucky enough, you'll catch an underground rock show in the tunnel"
   },
   {
-    title: "150 California St, San Francisco",
-    content: "One of many secret roof top parks in the FiDi area. The gaurd at the front desk will ask you where you're headed. If he doesn't tell you, go to the 6th floor and head right(west) after exiting the elevator"
+    location: "150 California St, San Francisco",
+    secret: "One of many secret roof top parks in the FiDi area. The gaurd at the front desk will ask you where you're headed. If he doesn't tell you, go to the 6th floor and head right(west) after exiting the elevator"
   }
 ];
 

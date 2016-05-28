@@ -3,8 +3,8 @@ var mongoose = require('mongoose'),
 
 var secretSchema = new Schema({
   user: { type: Schema.Types.ObjectId, ref: 'User' },
-  title: String,
-  content: String
+  location: String,
+  secret: String
 });
 
 var Secret = mongoose.model('Secret', secretSchema);
