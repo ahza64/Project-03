@@ -1,38 +1,38 @@
 var auth = require('../middleware/auth');
 var db = require('../models'),
     User = db.User,
-    Post = db.Post;
+    Secret = db.Secret;
 
 function index(req, res) {
-  Post
+  Secret
     .find({})
     .populate('user')
-    .exec(function(err, posts){
-      if (err || !posts || !posts.length) {
-        return res.status(404).send({message: 'Posts not found.'});
+    .exec(function(err, secrets){
+      if (err || !secrets || !secrets.length) {
+        return res.status(404).send({message: 'Secrets not found.'});
       }
-      res.send(posts);
+      res.send(secrets);
     });
 }
 
 function create(req, res){
-  var new_post = new Post(req.body);
-  new_post.user = req.user_id;
-  new_post.save(function(err, new_post){
-    res.send(new_post);
+  var new_secret = new Secret(req.body);
+  new_secret.user = req.user_id;
+  new_secret.save(function(err, new_secret){
+    res.send(new_secret);
   });
 }
 
 function show(req, res){
-  Post
+  Secret
     .findById(req.params.id)
     .populate('user')
-    .exec(function(err, found_post){
-      if (err || !found_post) {
-        return res.status(404).send({message: 'Post not found.'});
+    .exec(function(err, found_secret){
+      if (err || !found_secret) {
+        return res.status(404).send({message: 'Secret not found.'});
       }
 
-      res.send(found_post);
+      res.send(found_secret);
     });
 }
 
@@ -47,10 +47,10 @@ function update(req, res){
 
   Post
     .findOneAndUpdate(query, req.body)
-    .exec(function(err, post){
-      if (err || !post) {
-        console.log(post);
-        return res.status(404).send({messsage: 'Failed to update post.'});
+    .exec(function(err, secret){
+      if (err || !secret) {
+        console.log(secret);
+        return res.status(404).send({messsage: 'Failed to revise secret.'});
       }
       res.status(204).send();
     });
@@ -65,11 +65,11 @@ function destroy(req, res){
     query.user = req.user_id;
   }
 
-  Post
+  Secret
     .findOneAndRemove(query)
-    .exec(function(err, post){
-      if (err || !post) {
-        return res.status(404).send({messsage: 'Failed to delete post.'});
+    .exec(function(err, secret){
+      if (err || !secret) {
+        return res.status(404).send({messsage: 'Failed to erase secret.'});
       }
       res.status(204).send();
     });

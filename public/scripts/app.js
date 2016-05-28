@@ -1,13 +1,13 @@
 angular
-  .module('AuthSampleApp', [
+  .module('SFsecrets', [
     'ngRoute',
     'satellizer'
   ])
   .controller('MainController', MainController)
-  .controller('PostsIndexController', PostsIndexController)
-  .controller('PostsNewController', PostsNewController)
-  .controller('PostsShowController', PostsShowController)
-  .controller('PostsEditController', PostsEditController)
+  .controller('SecretsIndexController', SecretsIndexController)
+  .controller('SecretsNewController', SecretsNewController)
+  .controller('SecretsShowController', SecretsShowController)
+  .controller('SecretsEditController', SecretsEditController)
   .controller('LoginController', LoginController)
   .controller('SignupController', SignupController)
   .controller('LogoutController', LogoutController)
@@ -15,4 +15,3 @@ angular
   .service('UserService', UserService)
   .config(configRoutes)
   ;
-

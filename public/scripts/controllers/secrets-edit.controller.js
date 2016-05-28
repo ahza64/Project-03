@@ -1,9 +1,9 @@
-PostsEditController.$inject = ["$location", "$http", "$routeParams"]; // minification protection
-function PostsEditController ($location, $http, $routeParams) {
+SecretsEditController.$inject = ["$location", "$http", "$routeParams"]; // minification protection
+function SecretsEditController ($location, $http, $routeParams) {
   var vm = this;
   vm.update = update;
   vm.destroy = destroy;
-  vm.post = {}; // form data
+  vm.secret = {}; // form data
 
   var id = $routeParams.id;
   get(); // fetch one post (show)
@@ -12,21 +12,21 @@ function PostsEditController ($location, $http, $routeParams) {
 
   function update() {
     $http
-      .put('/api/posts/' + id, vm.post)
+      .put('/api/secrets/' + id, vm.secret)
       .then(onUpdateSuccess, onUpdateError);
 
     function onUpdateSuccess(response){
-      $location.path("/posts/" + id);
+      $location.path("/secrets/" + id);
     }
 
     function onUpdateError(response){
-      console.error("Failed to update post", response);
+      console.error("Failed to revision secret", response);
     }
   }
 
   function destroy() {
     $http
-      .delete('/api/posts/' + id)
+      .delete('/api/secrets/' + id)
       .then(onDeleteSuccess, onDeleteError);
 
     function onDeleteSuccess(response){
@@ -34,13 +34,13 @@ function PostsEditController ($location, $http, $routeParams) {
     }
 
     function onDeleteError(response){
-      console.error("Failed to delete post", response);
+      console.error("Failed to erase secret", response);
     }
   }
 
   function get() {
     $http
-      .get('/api/posts/' + id)
+      .get('/api/secrets/' + id)
       .then(onGetSuccess, onGetError);
 
     function onGetSuccess(response){
@@ -48,7 +48,7 @@ function PostsEditController ($location, $http, $routeParams) {
     }
 
     function onGetError(response){
-      console.error("Failed to get post", response);
+      console.error("Failed to get secret", response);
       $location.path("/");
     }
   };

@@ -9,9 +9,9 @@ function configRoutes($routeProvider, $locationProvider) {
 
   $routeProvider
     .when('/', {
-      templateUrl: 'templates/posts/index.html',
-      controller: 'PostsIndexController',
-      controllerAs: 'postsIndexCtrl'
+      templateUrl: 'templates/secrets/index.html',
+      controller: 'SecretsIndexController',
+      controllerAs: 'secretsIndexCtrl'
     })
     .when('/signup', {
       templateUrl: 'templates/user/signup.html',
@@ -44,28 +44,28 @@ function configRoutes($routeProvider, $locationProvider) {
         loginRequired: loginRequired
       }
     })
-    .when('/posts', {
-      templateUrl: 'templates/posts/index.html',
-      controller: 'PostsIndexController',
-      controllerAs: 'postsIndexCtrl'
+    .when('/secrets', {
+      templateUrl: 'templates/secrets/index.html',
+      controller: 'SecretsIndexController',
+      controllerAs: 'secretsIndexCtrl'
     })
-    .when('/posts/new', {
-      templateUrl: 'templates/posts/new.html',
-      controller: 'PostsNewController',
-      controllerAs: 'postsNewCtrl',
+    .when('/secrets/new', {
+      templateUrl: 'templates/secrets/new.html',
+      controller: 'SecretsNewController',
+      controllerAs: 'secretsNewCtrl',
       resolve: {
         loginRequired: loginRequired
       }
     })
-    .when('/posts/:id', {
-      templateUrl: 'templates/posts/show.html',
-      controller: 'PostsShowController',
-      controllerAs: 'postsShowCtrl'
+    .when('/secrets/:id', {
+      templateUrl: 'templates/secrets/show.html',
+      controller: 'SecretsShowController',
+      controllerAs: 'secretsShowCtrl'
     })
-    .when('/posts/:id/edit', {
-      templateUrl: 'templates/posts/edit.html',
-      controller: 'PostsEditController',
-      controllerAs: 'postsEditCtrl',
+    .when('/secrets/:id/edit', {
+      templateUrl: 'templates/secrets/edit.html',
+      controller: 'SecretsEditController',
+      controllerAs: 'secretsEditCtrl',
       resolve: {
         loginRequired: loginRequired
       }
