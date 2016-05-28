@@ -45,7 +45,7 @@ function update(req, res){
     query.user = req.user_id;
   }
 
-  Post
+  Secret
     .findOneAndUpdate(query, req.body)
     .exec(function(err, secret){
       if (err || !secret) {

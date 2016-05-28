@@ -44,7 +44,7 @@ function SecretsEditController ($location, $http, $routeParams) {
       .then(onGetSuccess, onGetError);
 
     function onGetSuccess(response){
-      vm.post = response.data;
+      vm.secret = response.data;
     }
 
     function onGetError(response){
