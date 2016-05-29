@@ -1,3 +1,5 @@
+
+
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 /*!
  * bootswatch v3.3.6
@@ -12,6 +14,52 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+
+#right-panel {
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+#right-panel select, #right-panel input {
+  font-size: 15px;
+}
+
+#right-panel select {
+  width: 100%;
+}
+
+#right-panel i {
+  font-size: 12px;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#map {
+  height: 100%;
+  float: left;
+  width: 70%;
+  height: 100%;
+}
+#right-panel {
+  margin: 20px;
+  border-width: 2px;
+  width: 20%;
+  float: left;
+  text-align: left;
+  padding-top: 20px;
+}
+#directions-panel {
+  margin-top: 20px;
+  background-color: #FFEE77;
+  padding: 10px;
+}
+
+
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
