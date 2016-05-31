@@ -1,0 +1,20 @@
+{
+  "name": "project-03",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "ahza64 <ahza64@yahoo.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ahza64/Project-03",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-google-maps": "^2.3.3"
+  }
+}

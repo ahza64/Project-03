@@ -3,7 +3,7 @@ var db = require("./models");
 var user_a = {
   email: "a",
   password: "a",
-  displayName: "Alan Perlis"
+  displayName: "James Bourne"
 };
 
 var secrets = [

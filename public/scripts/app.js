@@ -1,7 +1,8 @@
 angular
   .module('SFsecrets', [
     'ngRoute',
-    'satellizer'
+    'satellizer',
+    'uiGmapgoogle-maps'
   ])
   .controller('MainController', MainController)
   .controller('SecretsIndexController', SecretsIndexController)

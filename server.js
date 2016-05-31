@@ -48,6 +48,8 @@ app.get(['/', '/signup', '/login', '/logout', '/profile', '/secrets*'], function
   res.sendFile(__dirname + '/views/index.html');
 });
 
+app.use('/vendor', express.static(__dirname + '/bower_components'));
+
 
 /*
  * Listen on localhost:9000
