@@ -4,7 +4,9 @@ var mongoose = require('mongoose'),
 var secretSchema = new Schema({
   user: { type: Schema.Types.ObjectId, ref: 'User' },
   location: String,
-  secret: String
+  enigma: String,
+  latitude: Number,
+  longitude: Number
 });
 
 var Secret = mongoose.model('Secret', secretSchema);
