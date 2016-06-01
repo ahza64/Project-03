@@ -13,7 +13,14 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
-.angular-google-map-container { height: 800px; }
+.scrollBox{
+  height: 200px;
+  overflow: auto;
+}
+
+.angular-google-map-container {
+  height: 400px;
+}
 
 html {
   font-family: sans-serif;

@@ -19,14 +19,16 @@ function SecretsIndexController ($http, $scope) {
 
     // map config
     vm.mapCenter = { latitude: 37.7749, longitude: -122.4194 };
-    vm.mapZoom = 13;
-    vm.markerOptions = {icon: 'http://media3.giphy.com/media/1j18lLRk2RqCxpCg/200w.gif'};
+    vm.mapZoom = 12;
+    vm.markerOptions = {icon: 'images/Spy_icon.png'};
     vm.mapOptions = {
       styles:[
         {
           stylers:[
-            {gamma: 0.1},
-            {color: 'blue'}
+            {hue: '#003366'},
+            // {visibility: 'simplified'},
+            {gamma: 0.12},
+            // {weight: 0.1}
           ]
         }
       ]
