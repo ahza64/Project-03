@@ -20,6 +20,18 @@ function SecretsIndexController ($http, $scope) {
     // map config
     vm.mapCenter = { latitude: 37.7749, longitude: -122.4194 };
     vm.mapZoom = 13;
+    vm.markerOptions = {icon: 'http://media3.giphy.com/media/1j18lLRk2RqCxpCg/200w.gif'};
+    vm.mapOptions = {
+      styles:[
+        {
+          stylers:[
+            {gamma: 0.1},
+            {color: 'blue'}
+          ]
+        }
+      ]
+    };
+
 
 
     // var address ="1334 Emerson St, NE Washington DC";
