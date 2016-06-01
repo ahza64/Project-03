@@ -11,9 +11,26 @@ function SecretsEditController ($location, $http, $routeParams) {
   ////
 
   function update() {
-    $http
-      .put('/api/secrets/' + id, vm.secret)
-      .then(onUpdateSuccess, onUpdateError);
+    console.log("updating a location");
+    var address = vm.secret.location;
+    //please accept the information from google, thanks man!
+    $.ajax({
+      url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' +
+      address + '&key=AIzaSyArJRzc4s49N8ikvOh3ziAehwi9SLRDYgE',
+      success: function(_results) {
+        console.log(_results);
+        // vm.queryResults = _results.results;
+        vm.geodata = _results.results[0].geometry.location;
+
+        vm.secret.latitude = vm.geodata.lat;
+        vm.secret.longitude = vm.geodata.lng;
+
+      $http
+        .put('/api/secrets/' + id, vm.secret)
+        .then(onUpdateSuccess, onUpdateError);
+      }
+    });
+
 
     function onUpdateSuccess(response){
       $location.path("/secrets/" + id);
