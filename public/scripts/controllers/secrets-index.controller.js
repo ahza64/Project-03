@@ -1,5 +1,5 @@
-SecretsIndexController.$inject = ["$http"]; // minification protection
-function SecretsIndexController ($http) {
+SecretsIndexController.$inject = ["$http", "$scope"]; // minification protection
+function SecretsIndexController ($http, $scope) {
   var vm = this;
   vm.secrets = [];
 
@@ -19,9 +19,32 @@ function SecretsIndexController ($http) {
     vm.mapCenter = { latitude: 37.7749, longitude: -122.4194 };
     vm.mapZoom = 13;
 
+
+    var address ="1334 Emerson St, NE Washington DC";
+
+    $http.get('https://maps.googleapis.com/maps/api/geocode/json?address=' +
+    address + '&key=AIzaSyArJRzc4s49N8ikvOh3ziAehwi9SLRDYgE')
+      .then(function(_results){
+        vm.queryResults = _results.data.results;
+        vm.geodata = vm.queryResults[0].geometry.location;
+        console.log(vm.geodata);
+        vm.secretMarker.push({id: 86, latitude: vm.geolat, longitude: vm.geolng});
+
+      },
+      function error(_error){
+        vm.queryError = _error;
+      });
+      vm.geodata = {};
+      vm.geolat = vm.geodata.lat;
+      vm.geolng = vm.geodata.lng;
+      vm.queryResults = {};
+      vm.queryError = {};
+      vm.secretMarker = [];
+
+
+
     // goat retrieval department
     // var baseUrl = 'http://goats-api.herokuapp.com';
-    vm.secrets = [{id: 86, latitude: 37.7949, longitude: -122.4094}];
     // fetchAllGoats();  // fetch goats on start
     //
     // function fetchAllGoats() {
