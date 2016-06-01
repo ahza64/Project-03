@@ -2,6 +2,7 @@ SecretsIndexController.$inject = ["$http", "$scope"]; // minification protection
 function SecretsIndexController ($http, $scope) {
   var vm = this;
   vm.secrets = [];
+  // vm.secretMarker = [];
 
   query(); // fetch all the posts (index)
 
@@ -12,6 +13,7 @@ function SecretsIndexController ($http, $scope) {
       .get('/api/secrets')
       .then(function onSuccess(response) {
         vm.secrets = response.data;
+        // vm.secretMarker.push(respose.data);
       });
   }
 
@@ -28,13 +30,11 @@ function SecretsIndexController ($http, $scope) {
     //     vm.queryResults = _results.data.results;
     //     vm.geodata = vm.queryResults[0].geometry.location;
     //     console.log(vm.geodata);
-    //     vm.secretMarker.push({id: 86, latitude: vm.geolat, longitude: vm.geolng});
     //     vm.geodata = {};
     //     vm.geolat = vm.geodata.lat;
     //     vm.geolng = vm.geodata.lng;
     //     vm.queryResults = {};
     //     vm.queryError = {};
-    //     vm.secretMarker = [];
     //
     //   },
     //   function error(_error){
