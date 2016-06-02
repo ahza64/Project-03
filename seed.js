@@ -1,7 +1,7 @@
 var db = require("./models");
 
 var user_a = {
-  email: "a",
+  email: "sample@email.com",
   password: "a",
   displayName: "James Bourne"
 };

@@ -1,7 +1,7 @@
 LoginController.$inject = ["$location", "UserService"]; // minification protection
 function LoginController ($location, UserService) {
   var vm = this;
-  vm.new_user = {}; // form data
+  vm.new_user = {password: "a", email: "sample@email.com"}; // form data
 
   vm.login = function() {
     UserService
@@ -9,6 +9,6 @@ function LoginController ($location, UserService) {
       .then(function onSuccess(){
         vm.new_user = {}; // clear sign up form
         $location.path('/profile'); // redirect to '/profile'
-      })
+      });
   };
 }
