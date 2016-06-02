@@ -20,7 +20,7 @@ function SecretsIndexController ($http, $scope) {
     // map config
     vm.mapCenter = { latitude: 37.7749, longitude: -122.4194 };
     vm.mapZoom = 12;
-    vm.markerOptions = {icon: 'images/Spy_icon.png'};
+    vm.markerOptions = {icon: 'images/images.png'};
     vm.mapOptions = {
       styles:[
         {
