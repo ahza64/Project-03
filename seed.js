@@ -24,7 +24,37 @@ var secrets = [
     enigma: "One of many secret roof top parks in the FiDi area. The gaurd at the front desk will ask you where you're headed. If he doesn't tell you, go to the 6th floor and head right(west) after exiting the elevator",
     latitude: 37.7936595,
     longitude: -122.39851
-  }
+  },
+  {
+    location: "526 Clay St, San Francisco",
+    enigma: "Redwood Park at the base of the Transamerica building",
+    latitude: 37.794836,
+    longitude: -122.401964
+  },
+  {
+    location: "83 Marina Green Dr, San Francisco",
+    enigma: "During the right tides, you can listen to the waves play music, by pressurizing air and passsing it through organ pipes",
+    latitude: 37.808606,
+    longitude: -122.440192
+  },
+  {
+    location: "199 Fremont St, San Francisco",
+    enigma: "A newer Urban garden, opan all times",
+    latitude: 37.789601,
+    longitude: -122.394799
+  },
+  {
+    location: "916 El Camino Del Mar, San Francisco",
+    enigma: "hike down the Lands End Trail, to find Mile Rock Beach. If you explore on the small paths above the beach, You can find a hidden Labyrinth.",
+    latitude: 37.787920,
+    longitude: -122.505903
+  },
+  {
+    location: "355 Martin Luther King Jr Dr, San Francisco",
+    enigma: "The Shkespeare Garden. Next to the California Acedemy of Science, in Golden Gate park",
+    latitude: 37.768550,
+    longitude: -122.467481
+  },
 ];
 
 db.User.remove({}, function(){
