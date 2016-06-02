@@ -1,10 +1,9 @@
-SecretsIndexController.$inject = ["$http", "$scope"]; // minification protection
-function SecretsIndexController ($http, $scope) {
+SecretsIndexController.$inject = ["$http"]; // minification protection
+function SecretsIndexController ($http) {
   var vm = this;
   vm.secrets = [];
-  // vm.secretMarker = [];
 
-  query(); // fetch all the posts (index)
+  query(); // fetch all the secrets (index)
 
   ////
 
@@ -13,7 +12,6 @@ function SecretsIndexController ($http, $scope) {
       .get('/api/secrets')
       .then(function onSuccess(response) {
         vm.secrets = response.data;
-        // vm.secretMarker.push(respose.data);
       });
   }
 
@@ -26,52 +24,9 @@ function SecretsIndexController ($http, $scope) {
         {
           stylers:[
             {hue: '#003366'},
-            // {visibility: 'simplified'},
             {gamma: 0.12},
-            // {weight: 0.1}
           ]
         }
       ]
     };
-
-
-
-    // var address ="1334 Emerson St, NE Washington DC";
-    //
-    // $http.get('https://maps.googleapis.com/maps/api/geocode/json?address=' +
-    // address + '&key=AIzaSyArJRzc4s49N8ikvOh3ziAehwi9SLRDYgE')
-    //   .then(function(_results){
-    //     vm.queryResults = _results.data.results;
-    //     vm.geodata = vm.queryResults[0].geometry.location;
-    //     console.log(vm.geodata);
-    //     vm.geodata = {};
-    //     vm.geolat = vm.geodata.lat;
-    //     vm.geolng = vm.geodata.lng;
-    //     vm.queryResults = {};
-    //     vm.queryError = {};
-    //
-    //   },
-    //   function error(_error){
-    //     vm.queryError = _error;
-    //   });
-
-
-
-    // goat retrieval department
-    // var baseUrl = 'http://goats-api.herokuapp.com';
-    // fetchAllGoats();  // fetch goats on start
-    //
-    // function fetchAllGoats() {
-    //   $http({
-    //     method: 'GET',
-    //     url: baseUrl + '/api/goats'
-    //   }).then(function successCallback(response) {
-    //     console.log('goats received: ', response);
-    //     vm.goats = response.data;
-    //   }, function errorCallback(response) {
-    //     console.log('There was an error getting the data', response);
-    //   });
-    // }
-  // }
-
 }
