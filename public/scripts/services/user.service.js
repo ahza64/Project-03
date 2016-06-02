@@ -33,17 +33,17 @@ function UserService($http, $q, $auth){
   function signup(user_data){
     return (
       $auth
-       .signup(user_data) // signup (https://github.com/sahat/satellizer#authsignupuser-options)
-       .then(
-         function onSuccess(response) {
-           $auth.setToken(response.data.token); // set token (https://github.com/sahat/satellizer#authsettokentoken)
-           setCurrentUser();
-         },
+      .signup(user_data) // signup (https://github.com/sahat/satellizer#authsignupuser-options)
+      .then(
+        function onSuccess(response) {
+          $auth.setToken(response.data.token); // set token (https://github.com/sahat/satellizer#authsettokentoken)
+          setCurrentUser();
+        },
 
-         function onError(error) {
-           console.error(error);
-         }
-       )
+        function onError(error) {
+          console.error(error);
+        }
+      )
     );
   }
 
