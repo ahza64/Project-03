@@ -14,8 +14,8 @@ This app is built in the M.E.A.N. stack, using a few dependencies in npm to secu
 1. run `node seed.js`
 1. open `localhost:9000` in your browser
 
+[User Story](a url)
+[Wireframes](a url)
+[Data Relationships](aurl)
 
-  Link to your user stories - who are your users, what do they want, and why?
-  Link to your wireframes – sketches of major views / interfaces in your application.
-  Link to your entity relationship diagrams – plan out your data relationships before coding.
   Descriptions of any unsolved problems or future features.
