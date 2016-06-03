@@ -1,10 +1,11 @@
 
 https://project-03.herokuapp.com/
 
-Ever wondered what San Francisco has to offer? I, personally, love seeing the same streets and sidewalks every other city has... Actually, not really. Let's find and share our city's secrets. There are so many interesting and adventurous little spots to check out in San Francisco, let's discover them together.
+Ever wondered what San Francisco has to offer? There is so much a city has to offer, if you look in the right places, and San Francisco has no shortage. Let's find and share our city's secrets. There are so many interesting and adventurous little spots to check out in San Francisco, let's discover them together.
 
-M.E.A.N. stack
-clone this Repo, create an .env file i the main directory, add "SECRET_TOKEN=my-secret-key" to env, in the terminal, npm install node seed.js
+This app is built in the M.E.A.N. stack, using a few dependencies in npm to secure Auth and angular-google-maps in bower to render map data within the angular views.
+
+clone this Repo, create an **`.env`** file i the main directory, add "SECRET_TOKEN=ThisCanBeAnything" to env, in the terminal, npm install node seed.js
 
   A link to your hosted working app.
   A paragraph-long description (elevator pitch) of your project.
