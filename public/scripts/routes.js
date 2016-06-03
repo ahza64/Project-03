@@ -70,7 +70,7 @@ function configRoutes($routeProvider, $locationProvider, uiGmapGoogleMapApiProvi
         loginRequired: loginRequired
       }
     })
-    .otherwise({redirectTo: '/'});
+    // .otherwise({redirectTo: '/'});
 
 
     function skipIfLoggedIn($location, $auth) {
