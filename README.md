@@ -10,8 +10,9 @@ This app is built in the M.E.A.N. stack, using a few dependencies in npm to secu
 1. create an **`.env`** file in the main directory
 1. add "SECRET_TOKEN=ThisCanBeAnything" to env
 1. in the terminal, run `npm install`
-1. run `mongod`, then in another terminal window `nodemon`
+1. run `mongod`
 1. run `node seed.js`
+1. run `nodemon`
 1. open `localhost:9000` in your browser
 
 [User Story](a url)
