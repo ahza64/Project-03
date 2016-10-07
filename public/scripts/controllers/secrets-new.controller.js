@@ -19,10 +19,10 @@ function SecretsNewController ($location, $http) {
         vm.geodata = _results.results[0].geometry.location;
         vm.secret.latitude = vm.geodata.lat;
         vm.secret.longitude = vm.geodata.lng;
-        
+
         $http
-        .post('/api/secrets', vm.secret)
-        .then(onCreateSuccess, onCreateError);
+          .post('/api/secrets', vm.secret)
+          .then(onCreateSuccess, onCreateError);
       }
     });
 
