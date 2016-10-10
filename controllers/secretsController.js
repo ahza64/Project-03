@@ -77,8 +77,8 @@ function destroy(req, res){
 
 module.exports = {
   index: index,
-   create: create,
-   show: show,
-   update: update,
-   destroy: destroy
+  create: create,
+  show: show,
+  update: update,
+  destroy: destroy
 };

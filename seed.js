@@ -51,7 +51,7 @@ var secrets = [
   },
   {
     location: "355 Martin Luther King Jr Dr, San Francisco",
-    enigma: "The Shkespeare Garden. Next to the California Acedemy of Science, in Golden Gate park",
+    enigma: "The Shakespeare Garden. Next to the California Acedemy of Science, in Golden Gate park",
     latitude: 37.768550,
     longitude: -122.467481
   },
